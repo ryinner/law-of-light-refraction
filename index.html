@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Закон преломления света</title>
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+  <h1 class="text-center mb-3">Закон преломления света</h1>
+  <div class="flex items-center justify-between">
+    <form id="input" class="border flex flex-column gap-1 p-1">
+      <label for="light">
+        Угол
+        <input type="number" placeholder="Угол" id="light" value="45" min="1" max="89">
+      </label>
+      <label for="environ-top">
+        Среда вверх
+        <input type="text" placeholder="Угол" id="environ-top" value="1">
+      </label>
+      <label for="environ-bottom">
+        Среда низ
+        <input type="text" placeholder="Угол" id="environ-bottom" value="1.33">
+      </label>
+      <button type="submit" class="button">Рассчитать</button>
+    </form>
+    <canvas
+      id="canvas"
+      width="400"
+      height="400"
+    ></canvas>
+    <form class="border flex flex-column gap-1 p-1" onsubmit="event.preventDefault()">
+      <fieldset>
+        <legend>Углы</legend>
+        <button class="angle-button settings-button" data-angle="45">45deg</button>
+        <button class="angle-button settings-button" data-angle="60">60deg</button>
+      </fieldset>
+      <fieldset>
+        <legend>Среда вверх</legend>
+        <button class="environ-top-button settings-button" data-value="1">Воздух</button>
+        <button class="environ-top-button settings-button" data-value="1.33">Вода</button>
+        <button class="environ-top-button settings-button" data-value="1.47">Глицерин</button>
+        <button class="environ-top-button settings-button" data-value="1.54">Кварц</button>
+        <button class="environ-top-button settings-button" data-value="1.76">Рубин</button>
+        <button class="environ-top-button settings-button" data-value="2.42">Алмаз</button>
+      </fieldset>
+      <fieldset>
+        <legend>Среда низ</legend>
+        <button class="environ-bottom-button settings-button" data-value="1">Воздух</button>
+        <button class="environ-bottom-button settings-button" data-value="1.33">Вода</button>
+        <button class="environ-bottom-button settings-button" data-value="1.47">Глицерин</button>
+        <button class="environ-bottom-button settings-button" data-value="1.54">Кварц</button>
+        <button class="environ-bottom-button settings-button" data-value="1.76">Рубин</button>
+        <button class="environ-bottom-button settings-button" data-value="2.42">Алмаз</button>
+      </fieldset>
+    </form>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
