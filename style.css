@@ -40,6 +40,10 @@ input {
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .text-center {
   text-align: center;
 }
@@ -50,4 +54,23 @@ input {
 
 .mb-3 {
   margin-bottom: 1.5rem;
+}
+
+.light, .reflection, .refraction {
+  height: 16px;
+  width: 16px;
+
+  margin-right: 6px;
+}
+
+.light {
+  background-color: yellow;
+}
+
+.reflection {
+  background-color: blue;
+}
+
+.refraction {
+  background-color: red;
 }
